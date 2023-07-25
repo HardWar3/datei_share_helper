@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Security.Cryptography;
+using System.Windows;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 namespace datei_share_helper
 {
@@ -14,9 +17,9 @@ namespace datei_share_helper
         {
             string desktop_path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-            Synchronize_directory kekse = new Synchronize_directory("\\\\192.168.178.28\\hardy\\share_folder",desktop_path + "\\ziel_folder");
+            Synchronize_directory datei_synchronize = new Synchronize_directory("\\\\192.168.178.28\\hardy\\share_folder",desktop_path + "\\ziel_folder");
 
-            kekse.synchronize();
+            datei_synchronize.synchronize();
         }
     }
 }
