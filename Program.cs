@@ -17,7 +17,7 @@ namespace datei_share_helper
         {
             string desktop_path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-            Synchronize_directory datei_synchronize = new Synchronize_directory("\\\\192.168.178.28\\hardy\\share_folder",desktop_path + "\\ziel_folder");
+            Synchronize_directory datei_synchronize = new Synchronize_directory(@"\\192.168.178.28\share_folder",desktop_path + @"\ziel_folder");
 
             datei_synchronize.synchronize();
         }
